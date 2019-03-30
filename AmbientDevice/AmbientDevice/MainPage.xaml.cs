@@ -35,7 +35,7 @@ namespace AmbientDevice
                 if (string.IsNullOrEmpty(User.Text) || string.IsNullOrEmpty(Password.Text)) {
                     DisplayAlert("Alerta", "Para acceder a la opción de Gmail, entre los datos de usuario y contraseña.", "OK");
                 } else {
-                    new Mqtt().MqttPublish("{\"option\":\"2\",\"user\":\"" + RijndaelAlg.encryptString(User.Text) + "\",\"password\":\"" + RijndaelAlg.encryptString(Password.Text) + "\"}");
+                    new Mqtt().MqttPublish("{\"option\":\"3\",\"user\":\"" + RijndaelAlg.encryptString(User.Text) + "\",\"password\":\"" + RijndaelAlg.encryptString(Password.Text) + "\"}");
                 }
             };
         }
