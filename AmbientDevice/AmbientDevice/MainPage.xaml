@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AmbientDevice"
+             x:Class="AmbientDevice.MainPage">
+
+    <StackLayout BackgroundColor="LightCyan">
+        <!-- Place new controls here -->
+        <!--<Label Text="Welcome to Xamarin.Forms!" 
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />-->
+
+        <Grid Padding="20" ColumnSpacing="10" RowSpacing="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="Opciones" Grid.ColumnSpan="2" Text="¿Qué información desea mostrar en su Ambient Device?" TextColor="Black" />
+
+            <Button x:Name="RSS" Grid.Row="1" Text="BCC" TextColor="White" BackgroundColor="DarkCyan" />
+            <Button x:Name="Time" Grid.Row="1" Grid.Column="1" Text="Tiempo" TextColor="White" BackgroundColor="DarkCyan" />
+            <Entry x:Name="User" Placeholder="Usuario" PlaceholderColor="Black" Grid.Row="2" Grid.ColumnSpan="2" Text="" TextColor="Black" BackgroundColor="White" />
+            <Entry x:Name="Password" IsPassword="True" Placeholder="Contraseña" PlaceholderColor="Black" Grid.Row="3" Grid.ColumnSpan="2" Text="" TextColor="Black" BackgroundColor="White" />
+            <Button x:Name="Gmail" Grid.Row="4" Grid.ColumnSpan="2" Text="Correo" TextColor="White" BackgroundColor="DarkCyan" />
+            <Button x:Name="Messages" Grid.Row="5" Grid.ColumnSpan="2" Text="Mensajes" TextColor="White" BackgroundColor="DarkCyan" />
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
