@@ -18,7 +18,7 @@ namespace AmbientDevice
                 MaximumQualityOfService = MqttQualityOfService.AtMostOnce,
                 AllowWildcardsInTopicFilters = true
             };
-            var client = await MqttClient.CreateAsync("broker.hivemq.com", configuration);
+            var client = await MqttClient.CreateAsync("192.168.0.5", configuration);
 
             var sessionState = await client.ConnectAsync(new MqttClientCredentials(clientId: Guid.NewGuid().ToString("N")));
 
